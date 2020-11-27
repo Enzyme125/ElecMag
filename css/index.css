@@ -1,0 +1,15 @@
+body{
+	background-color: #000000;
+}
+
+#mag {
+	margin: 0 auto;
+
+	background-color: #000000;
+	border-color: #FF0000;
+	border-style: solid;
+}
+
+#can {
+	margin: 0 auto;
+}

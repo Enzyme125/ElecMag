@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<title>假计算器的玩具</title>
+	</head>
+	<body>
+		<div id="can">
+			<canvas id="mag" width="1300" height="600">你的浏览器不支持canvas</canvas>
+		</div>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/jq_mousewheel.js" ></script>
+		<script type="text/javascript" src="js/attr.js" ></script>
+		<script type="text/javascript" src="js/engine.js" ></script>
+		<script type="text/javascript" src="js/render.js" ></script>
+		<script type="text/javascript" src="js/subs.js" ></script>
+
+		<script>
+			var canvas,cxt;
+			worldHeight = $("#mag").height();
+			worldWidth = $("#mag").width();
+			canvas = $("#mag")[0];
+			cxt = canvas.getContext("2d");
+			$(window).ready(function(){
+				start();
+			})
+			$("#mag").mousewheel(function(event,delta){
+				if(delta > 0) {
+					scale /= 1.1;
+				} else {
+					scale *= 1.1;
+				}
+			})
+		</script>
+	</body>
+</html>
